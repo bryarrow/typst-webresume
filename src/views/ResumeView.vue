@@ -15,7 +15,7 @@ $typst.vector({ mainContent: sourceCode }).then((value) => {
 <template>
   <el-splitter>
     <el-splitter-panel></el-splitter-panel>
-    <el-splitter-panel class="p-2">
+    <el-splitter-panel>
       <TypstPreviewer :artifact="artifact"></TypstPreviewer>
     </el-splitter-panel>
     <el-splitter-panel collapsible></el-splitter-panel>

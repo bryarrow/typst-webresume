@@ -10,7 +10,7 @@ const { artifact = new Uint8Array(0) } = defineProps<prop>()
 </script>
 
 <template>
-  <div class="typst-preview h-full p-4 bg-[rgba(228,229,234,1)] dark:bg-[rgba(59,58,72,1)] rounded">
+  <div class="typst-preview h-full p-4 bg-[rgba(228,229,234,1)] dark:bg-[rgba(59,58,72,1)] !mx-2 rounded">
     <el-scrollbar>
       <TypstDocument :artifact="artifact" />
     </el-scrollbar>
