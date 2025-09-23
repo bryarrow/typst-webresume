@@ -10,7 +10,7 @@ const { artifact = new Uint8Array(0) } = defineProps<prop>()
 </script>
 
 <template>
-  <div class="typst-preview h-full">
+  <div class="typst-preview h-full p-4 bg-[rgba(228,229,234,1)] dark:bg-[rgba(59,58,72,1)] rounded">
     <el-scrollbar>
       <TypstDocument :artifact="artifact" />
     </el-scrollbar>
@@ -18,11 +18,6 @@ const { artifact = new Uint8Array(0) } = defineProps<prop>()
 </template>
 
 <style lang="css" scoped>
-.typst-preview {
-  padding: 2em;
-  background-color: #e4e5ea;
-  border-radius: 6px;
-}
 .typst-preview :deep(svg) {
   width: 100% !important;
   height: 100% !important;
