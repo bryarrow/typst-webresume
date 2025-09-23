@@ -1,13 +1,9 @@
-<template>
-  <TypstPreviewer :artifact="artifact"></TypstPreviewer>
-</template>
-
 <script setup lang="ts">
 import { $typst } from '@myriaddreamin/typst.ts'
 import TypstPreviewer from '@/components/TypstPreviewer.vue'
 import { ref } from 'vue'
 
-const sourceCode = '= Hello World!\nThis is a typst document compiled in browser.'
+const sourceCode = '= Hello World!\nThis is a typst document compiled in browser.\n\n#lorem(900)'
 
 const artifact = ref(new Uint8Array(0))
 $typst.vector({ mainContent: sourceCode }).then((value) => {
@@ -15,3 +11,13 @@ $typst.vector({ mainContent: sourceCode }).then((value) => {
 })
 
 </script>
+
+<template>
+  <el-splitter>
+    <el-splitter-panel></el-splitter-panel>
+    <el-splitter-panel class="p-2">
+      <TypstPreviewer :artifact="artifact"></TypstPreviewer>
+    </el-splitter-panel>
+    <el-splitter-panel collapsible></el-splitter-panel>
+  </el-splitter>
+</template>

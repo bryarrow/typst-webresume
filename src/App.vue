@@ -14,7 +14,7 @@ const showHeader = computed(() => windowWidth.value >= 768)
     <el-container class="h-full md:h-[95vh]">
       <AsideMenu />
       <el-main
-        class="!p-0"
+        class="!p-0 !overflow-hidden"
         :class="{
           'bg-white dark:bg-[#3c3c3c] md:shadow-2xl md:rounded-tl-xl md:rounded-bl-xl':
             $route.path == '/',
