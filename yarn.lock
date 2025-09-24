@@ -805,9 +805,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@myriaddreamin/typst.vue3@file:D:/codes/typst.ts/packages/typst.vue3/myriaddreamin-typst.vue3-v0.6.1-rc3.tgz::locator=typst-webresume%40workspace%3A.":
+"@myriaddreamin/typst.vue3@file:./lib/myriaddreamin-typst.vue3-v0.6.1-rc3.tgz::locator=typst-webresume%40workspace%3A.":
   version: 0.6.1-rc3
-  resolution: "@myriaddreamin/typst.vue3@file:/D%3A/codes/typst.ts/packages/typst.vue3/myriaddreamin-typst.vue3-v0.6.1-rc3.tgz#/D%3A/codes/typst.ts/packages/typst.vue3/myriaddreamin-typst.vue3-v0.6.1-rc3.tgz::hash=d0fdb9&locator=typst-webresume%40workspace%3A."
+  resolution: "@myriaddreamin/typst.vue3@file:./lib/myriaddreamin-typst.vue3-v0.6.1-rc3.tgz#./lib/myriaddreamin-typst.vue3-v0.6.1-rc3.tgz::hash=d0fdb9&locator=typst-webresume%40workspace%3A."
   dependencies:
     "@myriaddreamin/typst-ts-renderer": "npm:0.6.1-rc3"
     "@myriaddreamin/typst.ts": "npm:0.6.1-rc3"
@@ -4281,7 +4281,7 @@ __metadata:
   resolution: "typst-webresume@workspace:."
   dependencies:
     "@myriaddreamin/typst-ts-web-compiler": "npm:^0.6.1-rc3"
-    "@myriaddreamin/typst.vue3": "file:D:/codes/typst.ts/packages/typst.vue3/myriaddreamin-typst.vue3-v0.6.1-rc3.tgz"
+    "@myriaddreamin/typst.vue3": "file:./lib/myriaddreamin-typst.vue3-v0.6.1-rc3.tgz"
     "@tailwindcss/vite": "npm:^4.1.13"
     "@tsconfig/node22": "npm:^22.0.2"
     "@types/node": "npm:^22.16.5"
