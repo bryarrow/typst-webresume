@@ -4,9 +4,6 @@ import { ref } from 'vue'
 import MenuLink from '@/components/AsideMenu/MenuLink.vue'
 
 const isExtending = ref<boolean>(false)
-function toHome(){
-  window.location.href="/"
-}
 </script>
 
 <template>
@@ -25,7 +22,12 @@ function toHome(){
       <MenuLink to="/resume" text="Resume" :is-extending="isExtending"> <Document /> </MenuLink>
     </el-aside>
   </div>
-  <el-button circle :icon="HomeFilled" class="md:!hidden fixed top-5 left-3 z-50 !shadow-2xl" @click="toHome()"/>
+  <el-button
+    circle
+    :icon="HomeFilled"
+    class="md:!hidden fixed top-5 left-3 z-50 !shadow-2xl"
+    @click="$router.push('/')"
+  />
 </template>
 
 <style scoped></style>
