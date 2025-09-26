@@ -1,17 +1,21 @@
 <script setup lang="ts">
 import { $typst } from '@myriaddreamin/typst.ts'
 import TypstPreviewer from '@/components/TypstPreviewer.vue'
-import { ref } from 'vue'
+import { onMounted,  ref } from 'vue'
 import DataPanel from '@/components/DataPanel.vue'
 import StylePanel from '@/components/StylePanel.vue'
+import { loadWithDefault } from '@/utils/template/load/template.ts'
 
-const sourceCode =
-  '= Hello World!\nThis is a typst document compiled in browser.\n\n$\na_b=sum^c\n$\n\n#lorem(900)'
+const artifact = ref<Uint8Array>(new Uint8Array())
 
-const artifact = ref(new Uint8Array(0))
-$typst.vector({ mainContent: sourceCode }).then((value) => {
-  if (value) artifact.value = value
+onMounted(async () => {
+  const { templateMeta } = await loadWithDefault('typsume-cv-miku')
+  const vector = await $typst.vector({ root: '/', mainFilePath: templateMeta.main })
+  if (vector) {
+    artifact.value = vector
+  }
 })
+
 </script>
 
 <template>
