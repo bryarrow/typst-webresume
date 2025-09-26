@@ -650,6 +650,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@fireflysemantics/join@npm:^1.0.14":
+  version: 1.0.14
+  resolution: "@fireflysemantics/join@npm:1.0.14"
+  dependencies:
+    tslib: "npm:^2.1.0"
+  checksum: 10c0/a7c64da2c53df3002d7387992b0052b8162e3151b204e7d3da900c7d8a1269a83494e5dc5d6ee101e8d8e2a51ab6da86fe682a2dd7d2924a1c386d67c9038222
+  languageName: node
+  linkType: hard
+
 "@floating-ui/core@npm:^1.7.3":
   version: 1.7.3
   resolution: "@floating-ui/core@npm:1.7.3"
@@ -774,6 +783,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@myriaddreamin/typst-ts-renderer@file:./lib/myriaddreamin-typst-ts-renderer-v0.6.1-rc3.tgz::locator=typst-webresume%40workspace%3A.":
+  version: 0.6.1-rc3
+  resolution: "@myriaddreamin/typst-ts-renderer@file:./lib/myriaddreamin-typst-ts-renderer-v0.6.1-rc3.tgz#./lib/myriaddreamin-typst-ts-renderer-v0.6.1-rc3.tgz::hash=c51db3&locator=typst-webresume%40workspace%3A."
+  checksum: 10c0/c872670b1e7f81a058be5177a647c9c54b247ad6c32ce666d32bd1739676d69063eb830532c858f6d6aacb4bdd656e97746331a70f5d6d539787c7496911100a
+  languageName: node
+  linkType: hard
+
 "@myriaddreamin/typst-ts-renderer@npm:0.6.1-rc3":
   version: 0.6.1-rc3
   resolution: "@myriaddreamin/typst-ts-renderer@npm:0.6.1-rc3"
@@ -781,10 +797,27 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@myriaddreamin/typst-ts-web-compiler@npm:^0.6.1-rc3":
+"@myriaddreamin/typst-ts-web-compiler@file:./lib/myriaddreamin-typst-ts-web-compiler-v0.6.1-rc3.tgz::locator=typst-webresume%40workspace%3A.":
   version: 0.6.1-rc3
-  resolution: "@myriaddreamin/typst-ts-web-compiler@npm:0.6.1-rc3"
-  checksum: 10c0/2a076708fe722f3943a1a11e14ba166fae08fe02d3214f211a1165331de9ef568598d79bd4f606f3a6cc0d1f95ca773283ccebc565e725e0ace6d1e89b1c771e
+  resolution: "@myriaddreamin/typst-ts-web-compiler@file:./lib/myriaddreamin-typst-ts-web-compiler-v0.6.1-rc3.tgz#./lib/myriaddreamin-typst-ts-web-compiler-v0.6.1-rc3.tgz::hash=c6a093&locator=typst-webresume%40workspace%3A."
+  checksum: 10c0/ba6bd690fcbbbedd71bc2035b114c6d5ab03f02d88711f9c8bb604c0cf36e65f5d347703b255e62a0a3f02ea8744824570db3b25be8dba3d6285de1f26704ffd
+  languageName: node
+  linkType: hard
+
+"@myriaddreamin/typst.ts@file:./lib/myriaddreamin-typst.ts-v0.6.1-rc3.tgz::locator=typst-webresume%40workspace%3A.":
+  version: 0.6.1-rc3
+  resolution: "@myriaddreamin/typst.ts@file:./lib/myriaddreamin-typst.ts-v0.6.1-rc3.tgz#./lib/myriaddreamin-typst.ts-v0.6.1-rc3.tgz::hash=c34f52&locator=typst-webresume%40workspace%3A."
+  dependencies:
+    idb: "npm:^7.1.1"
+  peerDependencies:
+    "@myriaddreamin/typst-ts-renderer": ^0.6.1-rc3
+    "@myriaddreamin/typst-ts-web-compiler": ^0.6.1-rc3
+  peerDependenciesMeta:
+    "@myriaddreamin/typst-ts-renderer":
+      optional: true
+    "@myriaddreamin/typst-ts-web-compiler":
+      optional: true
+  checksum: 10c0/980c333002ae7d4cae1d65ecf45b7bbdb11276b57501d76e6be3cc824848fe777a44e1044a1f7ddb88d380eac8e93edd45fb9c2c1382df7ca2e9763796bc1294
   languageName: node
   linkType: hard
 
@@ -807,13 +840,13 @@ __metadata:
 
 "@myriaddreamin/typst.vue3@file:./lib/myriaddreamin-typst.vue3-v0.6.1-rc3.tgz::locator=typst-webresume%40workspace%3A.":
   version: 0.6.1-rc3
-  resolution: "@myriaddreamin/typst.vue3@file:./lib/myriaddreamin-typst.vue3-v0.6.1-rc3.tgz#./lib/myriaddreamin-typst.vue3-v0.6.1-rc3.tgz::hash=d0fdb9&locator=typst-webresume%40workspace%3A."
+  resolution: "@myriaddreamin/typst.vue3@file:./lib/myriaddreamin-typst.vue3-v0.6.1-rc3.tgz#./lib/myriaddreamin-typst.vue3-v0.6.1-rc3.tgz::hash=aafa3f&locator=typst-webresume%40workspace%3A."
   dependencies:
     "@myriaddreamin/typst-ts-renderer": "npm:0.6.1-rc3"
     "@myriaddreamin/typst.ts": "npm:0.6.1-rc3"
   peerDependencies:
     vue: ^3.4.31
-  checksum: 10c0/2ad17ab569c36d504faa0be99c128cab2c37064af9555202b902dec45c3998bc2811211491b8a9e4758f25e51a07ad2a1319ed3c5d010be1aad943df8f46811c
+  checksum: 10c0/33a8798c94c3998c49a08ea56356f2ac5b35724bf25fe892d8609eb58094211ef152c635930ecc3b601383a4e712b25db122ae553cf349e0778d2e0a6498c0f3
   languageName: node
   linkType: hard
 
@@ -4225,7 +4258,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tslib@npm:^2.4.0, tslib@npm:^2.8.0":
+"tslib@npm:^2.1.0, tslib@npm:^2.4.0, tslib@npm:^2.8.0":
   version: 2.8.1
   resolution: "tslib@npm:2.8.1"
   checksum: 10c0/9c4759110a19c53f992d9aae23aac5ced636e99887b51b9e61def52611732872ff7668757d4e4c61f19691e36f4da981cd9485e869b4a7408d689f6bf1f14e62
@@ -4280,7 +4313,10 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "typst-webresume@workspace:."
   dependencies:
-    "@myriaddreamin/typst-ts-web-compiler": "npm:^0.6.1-rc3"
+    "@fireflysemantics/join": "npm:^1.0.14"
+    "@myriaddreamin/typst-ts-renderer": "file:./lib/myriaddreamin-typst-ts-renderer-v0.6.1-rc3.tgz"
+    "@myriaddreamin/typst-ts-web-compiler": "file:./lib/myriaddreamin-typst-ts-web-compiler-v0.6.1-rc3.tgz"
+    "@myriaddreamin/typst.ts": "file:./lib/myriaddreamin-typst.ts-v0.6.1-rc3.tgz"
     "@myriaddreamin/typst.vue3": "file:./lib/myriaddreamin-typst.vue3-v0.6.1-rc3.tgz"
     "@tailwindcss/vite": "npm:^4.1.13"
     "@tsconfig/node22": "npm:^22.0.2"

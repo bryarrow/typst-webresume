@@ -16,7 +16,10 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
-    "@myriaddreamin/typst-ts-web-compiler": "^0.6.1-rc3",
+    "@fireflysemantics/join": "^1.0.14",
+    "@myriaddreamin/typst-ts-renderer": "file:./lib/myriaddreamin-typst-ts-renderer-v0.6.1-rc3.tgz",
+    "@myriaddreamin/typst-ts-web-compiler": "file:./lib/myriaddreamin-typst-ts-web-compiler-v0.6.1-rc3.tgz",
+    "@myriaddreamin/typst.ts": "file:./lib/myriaddreamin-typst.ts-v0.6.1-rc3.tgz",
     "@myriaddreamin/typst.vue3": "file:./lib/myriaddreamin-typst.vue3-v0.6.1-rc3.tgz",
     "@tailwindcss/vite": "^4.1.13",
     "element-plus": "^2.11.3",

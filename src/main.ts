@@ -17,10 +17,10 @@ app.use(ElementPlus)
 
 app.mount('#app')
 
-import {$typst} from '@myriaddreamin/typst.ts'
+import { $typst } from '@myriaddreamin/typst.ts'
 
 $typst.setCompilerInitOptions({
   beforeBuild: [],
   getModule: () =>
-    'https://cdn.jsdelivr.net/npm/@myriaddreamin/typst-ts-web-compiler/pkg/typst_ts_web_compiler_bg.wasm',
+    '/wasm/typst_ts_web_compiler_bg.wasm',
 })
