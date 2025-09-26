@@ -7,6 +7,7 @@ import StylePanel from '@/components/StylePanel.vue'
 import { loadWithDefault } from '@/utils/template/load/template.ts'
 
 const artifact = ref<Uint8Array>(new Uint8Array())
+const isLoading = ref(true)
 
 onMounted(async () => {
   const { templateMeta } = await loadWithDefault('typsume-cv-miku')
@@ -14,6 +15,7 @@ onMounted(async () => {
   if (vector) {
     artifact.value = vector
   }
+  isLoading.value = false
 })
 
 </script>
@@ -24,7 +26,7 @@ onMounted(async () => {
       <DataPanel />
     </el-splitter-panel>
     <el-splitter-panel>
-      <TypstPreviewer :artifact="artifact" />
+      <TypstPreviewer :artifact="artifact" :is-loading="isLoading" />
     </el-splitter-panel>
     <el-splitter-panel collapsible>
       <StylePanel />
