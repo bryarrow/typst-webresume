@@ -1,0 +1,23 @@
+{
+  "version": "v0.1.1",
+  "name": "typsume-cv-miku",
+  "main": "/cv_1.typ",
+  "style": "/template.typ",
+  "data": "/data.typ",
+  "dataDefault": "/test.json",
+  "icons": [
+    "/assets/icons/curl.svg",
+    "/assets/icons/darts.svg",
+    "/assets/icons/email.svg",
+    "/assets/icons/football.svg",
+    "/assets/icons/github.svg",
+    "/assets/icons/home.svg",
+    "/assets/icons/linkedin.svg",
+    "/assets/icons/mortarboard.svg",
+    "/assets/icons/phone.svg",
+    "/assets/icons/seedling.svg",
+    "/assets/icons/telescope.svg",
+    "/assets/icons/wechat.svg"
+  ],
+  "otherFiles": ["/assets/imgs/profile-photo.jpg"]
+}

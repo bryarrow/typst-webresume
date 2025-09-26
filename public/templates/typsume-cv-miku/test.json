@@ -1,0 +1,104 @@
+{
+  "author": {
+    "authorName": { "type": "plain-text", "value": "Nakano Miku" },
+    "photoUrl": "assets/imgs/profile-photo.jpg",
+    "politicalStatus": null,
+    "contacts": {
+      "email": {
+        "type": "link",
+        "iconUrl": "assets/icons/email.svg",
+        "linkUrl": "",
+        "linkText": { "type": "plain-text", "value": "n.miku0505\\@socomo.ne.jp" }
+      },
+      "phone": { "type": "plain-text", "value": "(+81) 0906914373641" }
+    },
+    "otherInfos": [
+      {
+        "type": "link",
+        "iconUrl": "assets/icons/home.svg",
+        "linkUrl": "https://miku.example.com",
+        "linkText": { "type": "plain-text", "value": "miku.example.com" }
+      },
+      {
+        "type": "link",
+        "iconUrl": "assets/icons/github.svg",
+        "linkUrl": "https://miku.example.com",
+        "linkText": { "type": "plain-text", "value": "miku" }
+      },
+      {
+        "type": "link",
+        "iconUrl": "assets/icons/linkedin.svg",
+        "linkUrl": "https://miku.example.com",
+        "linkText": { "type": "plain-text", "value": "Nakano Miku" }
+      }
+    ]
+  },
+  "sections": [
+    {
+      "type": "section",
+      "iconUrl": "assets/icons/curl.svg",
+      "title": { "type": "plain-text", "value": "Self Introduction" },
+      "content": [{ "type": "plain-text", "value": "#lorem(64)" }]
+    },
+    {
+      "type": "section",
+      "iconUrl": "assets/icons/mortarboard.svg",
+      "title": { "type": "plain-text", "value": "Education" },
+      "content": [
+        {
+          "type": "dated-block",
+          "term": { "type": "plain-text", "value": "*#lorem(4)* \\\n#lorem(4)" },
+          "data": { "type": "plain-text", "value": "Tokyo, Japan \\\n202x - _present_" }
+        },
+        { "type": "plain-text", "value": "#lorem(32)" }
+      ]
+    },
+    {
+      "type": "section",
+      "iconUrl": "assets/icons/seedling.svg",
+      "title": { "type": "plain-text", "value": "Technical Skills" },
+      "content": [
+        {
+          "type": "plain-text",
+          "value": "- *Programming*: #lorem(8)\n  - #lorem(8)\n  - #lorem(8)\n- *Key words*: #lorem(8)\n- *Tools*: #lorem(8)\n  - #lorem(8)\n  - #lorem(8)"
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "iconUrl": "assets/icons/telescope.svg",
+      "title": { "type": "plain-text", "value": "Project Experience" },
+      "content": [
+        {
+          "type": "dated-block",
+          "term": { "type": "plain-text", "value": "*#lorem(4)* \\\nMaintainer" },
+          "data": { "type": "plain-text", "value": "202x - _present_" }
+        },
+        { "type": "plain-text", "value": "- #lorem(32)\n- #lorem(8)" }
+      ]
+    },
+    {
+      "type": "section",
+      "iconUrl": "assets/icons/darts.svg",
+      "title": { "type": "plain-text", "value": "Activity Experience" },
+      "content": [
+        {
+          "type": "dated-block",
+          "term": { "type": "plain-text", "value": "*#lorem(4)* \\\nMaintainer" },
+          "data": { "type": "plain-text", "value": "202x - _present_" }
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "iconUrl": "assets/icons/football.svg",
+      "title": { "type": "plain-text", "value": "Hobbies and Interests" },
+      "content": [
+        {
+          "type": "plain-text",
+          "value": "#lorem(32)\n\n- *#lorem(4)*: #lorem(4)\n- *#lorem(4)*: #lorem(8)"
+        }
+      ]
+    }
+  ]
+}

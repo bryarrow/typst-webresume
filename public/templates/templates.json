@@ -2,8 +2,8 @@
   "version": "v0.1.0",
   "templates": {
     "typsume-cv-miku": {
-      "path": "typst-cv-miku",
-      "repo": "https://github.com/ice-kylin/typst-cv-miku.git"
+      "path": "typsume-cv-miku/",
+      "repo": ""
     }
   }
 }
