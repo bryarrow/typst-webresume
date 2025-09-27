@@ -840,13 +840,13 @@ __metadata:
 
 "@myriaddreamin/typst.vue3@file:./lib/myriaddreamin-typst.vue3-v0.6.1-rc3.tgz::locator=typst-webresume%40workspace%3A.":
   version: 0.6.1-rc3
-  resolution: "@myriaddreamin/typst.vue3@file:./lib/myriaddreamin-typst.vue3-v0.6.1-rc3.tgz#./lib/myriaddreamin-typst.vue3-v0.6.1-rc3.tgz::hash=aafa3f&locator=typst-webresume%40workspace%3A."
+  resolution: "@myriaddreamin/typst.vue3@file:./lib/myriaddreamin-typst.vue3-v0.6.1-rc3.tgz#./lib/myriaddreamin-typst.vue3-v0.6.1-rc3.tgz::hash=2e08f6&locator=typst-webresume%40workspace%3A."
   dependencies:
     "@myriaddreamin/typst-ts-renderer": "npm:0.6.1-rc3"
     "@myriaddreamin/typst.ts": "npm:0.6.1-rc3"
   peerDependencies:
     vue: ^3.4.31
-  checksum: 10c0/33a8798c94c3998c49a08ea56356f2ac5b35724bf25fe892d8609eb58094211ef152c635930ecc3b601383a4e712b25db122ae553cf349e0778d2e0a6498c0f3
+  checksum: 10c0/665e9f1895553139f181a36c173d3e27de432ef3dd207878877a3ad4b0412874f9a5bcfc1a4d78ba987196518bfebe340c1005abc363d3f760f4885b1bff06a9
   languageName: node
   linkType: hard
 
