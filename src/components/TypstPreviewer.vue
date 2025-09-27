@@ -6,7 +6,7 @@ interface prop {
   isLoading: boolean
 }
 
-const { artifact = new Uint8Array(0), isLoading=true } = defineProps<prop>()
+const { artifact = new Uint8Array(0), isLoading = true } = defineProps<prop>()
 </script>
 
 <template>
@@ -14,11 +14,18 @@ const { artifact = new Uint8Array(0), isLoading=true } = defineProps<prop>()
     class="typst-preview h-[98%] p-4 bg-[rgba(228,229,234,1)] dark:bg-[rgba(59,58,72,1)] mx-2 rounded shadow"
   >
     <el-scrollbar v-loading="isLoading">
-      <TypstDocument :artifact="artifact" />
+      <TypstDocument
+        :artifact="artifact"
+        :rendererInitOptions="{
+          getModule: () =>
+            'https://cdn.jsdmirror.com/npm/@myriaddreamin/typst-ts-renderer/pkg/typst_ts_renderer_bg.wasm',
+        }"
+      />
     </el-scrollbar>
   </div>
 </template>
 
+<!--suppress CssUnusedSymbol class .circular will render in runtime-->
 <style lang="css" scoped>
 .typst-preview :deep(svg:not(.circular)) {
   width: 100% !important;
