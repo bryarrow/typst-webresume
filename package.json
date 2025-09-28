@@ -23,6 +23,7 @@
     "@myriaddreamin/typst.vue3": "file:./lib/myriaddreamin-typst.vue3-v0.6.1-rc3.tgz",
     "@tailwindcss/vite": "^4.1.13",
     "element-plus": "^2.11.3",
+    "pako": "^2.1.0",
     "tailwindcss": "^4.1.13",
     "vue": "^3.5.18",
     "vue-eslint-parser": "^10.2.0",
@@ -31,6 +32,7 @@
   "devDependencies": {
     "@tsconfig/node22": "^22.0.2",
     "@types/node": "^22.16.5",
+    "@types/pako": "^2",
     "@vitejs/plugin-vue": "^6.0.1",
     "@vue/eslint-config-prettier": "^10.2.0",
     "@vue/eslint-config-typescript": "^14.6.0",
