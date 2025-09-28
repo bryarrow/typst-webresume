@@ -806,7 +806,7 @@ __metadata:
 
 "@myriaddreamin/typst.ts@file:./lib/myriaddreamin-typst.ts-v0.6.1-rc3.tgz::locator=typst-webresume%40workspace%3A.":
   version: 0.6.1-rc3
-  resolution: "@myriaddreamin/typst.ts@file:./lib/myriaddreamin-typst.ts-v0.6.1-rc3.tgz#./lib/myriaddreamin-typst.ts-v0.6.1-rc3.tgz::hash=c34f52&locator=typst-webresume%40workspace%3A."
+  resolution: "@myriaddreamin/typst.ts@file:./lib/myriaddreamin-typst.ts-v0.6.1-rc3.tgz#./lib/myriaddreamin-typst.ts-v0.6.1-rc3.tgz::hash=d00fd6&locator=typst-webresume%40workspace%3A."
   dependencies:
     idb: "npm:^7.1.1"
   peerDependencies:
@@ -817,7 +817,7 @@ __metadata:
       optional: true
     "@myriaddreamin/typst-ts-web-compiler":
       optional: true
-  checksum: 10c0/980c333002ae7d4cae1d65ecf45b7bbdb11276b57501d76e6be3cc824848fe777a44e1044a1f7ddb88d380eac8e93edd45fb9c2c1382df7ca2e9763796bc1294
+  checksum: 10c0/59226a5bc763d007783a4adf4d4ef39d5f761f15680968da15d7e3298f988445b020822863b16149f89a8d32864dd696964357c2c5f92a15fc4096fe22e8f29f
   languageName: node
   linkType: hard
 
