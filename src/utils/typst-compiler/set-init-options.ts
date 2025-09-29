@@ -1,11 +1,12 @@
-import { $typst, loadFonts } from '@myriaddreamin/typst.ts'
 import pako from 'pako'
+import { loadFonts } from '@myriaddreamin/typst.ts'
+import { typst } from '@/utils/typst-compiler/typst.ts'
 
 let isSet = false
 
 export default function setTypst() {
   if (!isSet) {
-    $typst.setCompilerInitOptions({
+    typst.setCompilerInitOptions({
       beforeBuild: [
         loadFonts([], {
           assets: ['text', 'cjk'],
