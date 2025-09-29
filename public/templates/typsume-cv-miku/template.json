@@ -4,7 +4,7 @@
   "main": "/cv_1.typ",
   "style": "/template.typ",
   "data": "/data.typ",
-  "dataDefault": "/test.json",
+  "dataDefault": "/default.json",
   "icons": [
     "/assets/icons/curl.svg",
     "/assets/icons/darts.svg",
