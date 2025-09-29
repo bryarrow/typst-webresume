@@ -3,6 +3,7 @@ import { addFileString, addFileUrl } from '@/utils/typst-compiler/add-file.ts'
 import { getTemplateInfo } from '@/utils/template/get-info/template.ts'
 
 import type TemplateMeta from '@/utils/template/templates-info/template'
+import type { Data } from '@/utils/template/template-data/data-type'
 
 export async function loadTemplate(templateName: string) {
   const templatePath = join('/templates/', getTemplateInfo(templateName).path)
@@ -22,11 +23,15 @@ export async function loadTemplate(templateName: string) {
 
 export async function loadWithDefault(templateName: string) {
   const { templatePath, templateMeta } = await loadTemplate(templateName)
+  const { Data } = await import('@/utils/template/template-data/data.ts')
+  let data: Data
   if (templateMeta.dataDefault !== '') {
-    await addFileUrl('/data.json', join(templatePath, templateMeta.dataDefault))
+    const dataJson = await (await fetch(join(templatePath,templateMeta.dataDefault))).text()
+    data = new Data(JSON.parse(dataJson).author, JSON.parse(dataJson).sections)
+    await addFileString('/data.json', dataJson)
   } else {
-    const defaultData = await import('@/utils/template/template-data/data.ts')
-    await addFileString('/data.json', JSON.stringify(new defaultData.Data()))
+    data = new Data()
+    await addFileString('/data.json', JSON.stringify(data))
   }
-  return { templatePath, templateMeta }
+  return { templatePath, templateMeta, data }
 }
