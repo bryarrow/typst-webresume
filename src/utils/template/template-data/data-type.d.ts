@@ -1,17 +1,17 @@
 export interface PlainText {
-  type: string
+  type: 'plain-text'
   value: string
 }
 
 export interface Link {
-  type: string
+  type: 'link'
   iconUrl: string | null
   linkUrl: string
   linkText: PlainText
 }
 
 export interface DatedBlock {
-  type: string
+  type: 'dated-block'
   term: PlainText
   // you can add a _data: Date[] and a getter/setter to support Date as template-data
   data: PlainText
@@ -26,7 +26,7 @@ export interface AuthorInfo {
 }
 
 export interface Section {
-  type: string
+  type: 'section'
   iconUrl: string | null
   title: PlainText
   content: (PlainText | DatedBlock | Link)[]
