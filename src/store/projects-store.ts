@@ -33,13 +33,16 @@ class ProjectData {
 
 class Project {
   private _isLoad: boolean = false
-  private _templateMeta!: TemplateMeta
+  private _templateMeta?: TemplateMeta
   constructor(private dataRef: ProjectData) {}
   get data() {
     return this.dataRef.data
   }
   set data(value: Data | null) {
     this.dataRef.data = value
+  }
+  get templateInfo(){
+    return this.dataRef.templateInfo
   }
 
   async load() {
@@ -59,6 +62,11 @@ class Project {
 
   async loadData() {
     await addFileString('/data.json', JSON.stringify(this.data))
+  }
+
+  async getMeta(){
+    if (!this._templateMeta) await this.load()
+    return this._templateMeta!
   }
 
   async addPhoto(path: string, raw: Uint8Array): Promise<string> {
@@ -89,7 +97,7 @@ class Project {
       await this.loadData()
     }
     await this.loadPhotos()
-    return typst.vector({ mainFilePath: this._templateMeta.main })
+    return typst.vector({ mainFilePath: this._templateMeta!.main })
   }
 
   async compilePDF() {
@@ -99,7 +107,7 @@ class Project {
       await this.loadData()
     }
     await this.loadPhotos()
-    return typst.pdf({ mainFilePath: this._templateMeta.main })
+    return typst.pdf({ mainFilePath: this._templateMeta!.main })
   }
 }
 
