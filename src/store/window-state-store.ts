@@ -1,5 +1,6 @@
 import { defineStore } from 'pinia'
 import { computed, ref } from 'vue'
+import { useDark, useToggle } from '@vueuse/core'
 import { useProjectsStore } from '@/store/projects-store.ts'
 
 export const useWindowStateStore = defineStore(
@@ -14,7 +15,10 @@ export const useWindowStateStore = defineStore(
         return projectStore.allProjectsData[currentTab.value].name
       }
     })
-    return { currentTab, title }
+
+    const isDark = useDark()
+    const toggleDark = useToggle(isDark)
+    return { currentTab, title, isDark, toggleDark }
   },
   {
     persist: [
