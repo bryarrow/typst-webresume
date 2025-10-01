@@ -21,6 +21,9 @@ const data = computed({
     }
   },
 })
+const templatePath = computed(() => {
+  return `/templates/${projectStore.activeProject?.templateInfo.path}`
+})
 
 const updateArtifact = debounce(async () => {
   if (!projectStore.activeProject) return
@@ -30,13 +33,13 @@ const updateArtifact = debounce(async () => {
   isLoading.value = false
 }, 300)
 
-watch(()=>projectStore.activeProject?.data, updateArtifact, { immediate: true ,deep: true })
+watch(data, updateArtifact, { immediate: true ,deep: true })
 </script>
 
 <template>
   <el-splitter>
     <el-splitter-panel>
-      <DataPanel v-model:data="data" />
+      <DataPanel v-model:data="data" :template-path="templatePath"/>
     </el-splitter-panel>
     <el-splitter-panel>
       <TypstPreviewer :artifact="artifact" :is-loading="isLoading" />
