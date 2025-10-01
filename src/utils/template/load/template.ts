@@ -3,7 +3,7 @@ import { addFileString, addFileUrl } from '@/utils/typst-compiler/add-file.ts'
 import { getTemplateInfo } from '@/utils/template/get-info/template.ts'
 
 import type TemplateMeta from '@/utils/template/templates-info/template'
-import type { Data } from '@/utils/template/template-data/data-type'
+import type { Data } from '@/utils/template/template-data/data'
 
 export async function loadTemplate(templateName: string) {
   const templatePath = join('/templates/', getTemplateInfo(templateName).path)
