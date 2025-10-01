@@ -46,7 +46,7 @@
 #let political-status = if (authorJson.politicalStatus == none) {
   none
 } else {
-  json-plain(authorJson.political-status)
+  json-plain(authorJson.politicalStatus)
 }
 #let profile-photo = if authorJson.photoUrl == none { none } else { image(authorJson.photoUrl,width: 22mm) }
 #let email = [
