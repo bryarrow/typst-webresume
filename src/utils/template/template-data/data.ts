@@ -94,7 +94,7 @@ export class Section implements DataType.Section {
   }
 }
 
-class AuthorInfo implements DataType.AuthorInfo {
+export class AuthorInfo implements DataType.AuthorInfo {
   authorName: PlainText
   photoUrl: string | null
   politicalStatus: PlainText | null
