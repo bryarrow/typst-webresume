@@ -1,7 +1,11 @@
 <script setup lang="ts">
-import { DatedBlock, PlainText } from '@/utils/template/template-data/data.ts'
-import PlainEditor from '@/components/ResumePanels/Editors/PlainEditor.vue'
 import { ref, watch } from 'vue'
+import { storeToRefs } from 'pinia'
+import { DatedBlock, PlainText } from '@/utils/template/template-data/data.ts'
+import { useWindowStateStore } from '@/store/window-state-store.ts'
+import PlainEditor from '@/components/ResumePanels/Editors/PlainEditor.vue'
+
+const { currentLocateID } = storeToRefs(useWindowStateStore())
 
 const data = defineModel<DatedBlock>({ required: true })
 const dateMode = ref<'date' | 'text'>('text')
@@ -12,9 +16,13 @@ const dateEnd = ref(new Date())
 const dateText = ref<PlainText>(new PlainText(data.value.data.value))
 watch([dateStart, dateEnd], ([start, end]) => {
   if (start.getTime() === end.getTime()) {
-    dateText.value = new PlainText(start.toDateString())
+    dateText.value = new PlainText(start.toLocaleDateString(currentLocateID.value))
   } else {
-    dateText.value = new PlainText(start.toDateString() + ' --- ' + end.toDateString())
+    dateText.value = new PlainText(
+      start.toLocaleDateString(currentLocateID.value) +
+        ' --- ' +
+        end.toLocaleDateString(currentLocateID.value),
+    )
   }
 })
 watch(
