@@ -11,7 +11,7 @@ const { artifact = new Uint8Array(0), isLoading = true } = defineProps<prop>()
 
 <template>
   <div
-    class="typst-preview h-[98%] p-4 bg-[rgba(228,229,234,1)] dark:bg-[rgba(59,58,72,1)] mx-2 rounded shadow"
+    class="typst-preview h-[90%] p-4 bg-[rgba(228,229,234,1)] dark:bg-[rgba(59,58,72,1)] mx-2 rounded shadow"
   >
     <el-scrollbar v-loading="isLoading">
       <TypstDocument
