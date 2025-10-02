@@ -7,7 +7,6 @@ const data = defineModel<DatedBlock>({ required: true })
 const dateMode = ref<'date' | 'text'>('text')
 const dateModeOptions = ['date', 'text']
 
-// 这里这样写是因为会Data在序列化之后丢失方法，原来的data getter和setter就不那么好用
 const dateStart = ref(new Date())
 const dateEnd = ref(new Date())
 const dateText = ref<PlainText>(new PlainText(data.value.data.value))
