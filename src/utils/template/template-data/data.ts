@@ -41,7 +41,7 @@ export class DatedBlock implements DataType.DatedBlock {
       return this._data
     }
   }
-  set data(data: PlainText | Date[]) {
+  set data(data: PlainText | [Date, Date]) {
     this._data = data
   }
 
