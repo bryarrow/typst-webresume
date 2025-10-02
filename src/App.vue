@@ -5,9 +5,10 @@ import type { TabPaneName } from 'element-plus'
 import router from '@/router'
 import { useProjectsStore } from '@/store/projects-store.ts'
 import { useWindowStateStore } from '@/store/window-state-store.ts'
+import locate from '@/utils/i18n/get-element-plus-locate.ts'
 
 const projectsStore = useProjectsStore()
-const { currentTab, title } = storeToRefs(useWindowStateStore())
+const { currentTab, title, currentLocateID } = storeToRefs(useWindowStateStore())
 
 const changeTab = (target: TabPaneName) => {
   switch (target) {
@@ -49,6 +50,7 @@ const removeTab = async (targetName: TabPaneName) => {
 </script>
 
 <template>
+  <el-config-provider :locale="locate(currentLocateID)">
   <el-container class="bg-gray-100 dark:bg-[rgba(59,58,72,1)] h-screen">
     <el-header class="bg-transparent !h-0 md:!h-[5vh]">{{title}}</el-header>
     <div class="md:hidden bg-white dark:bg-black h-15 w-full"></div>
@@ -69,6 +71,7 @@ const removeTab = async (targetName: TabPaneName) => {
       <RouterView />
     </el-main>
   </el-container>
+  </el-config-provider>
 </template>
 
 <!--suppress CssUnusedSymbol -->
