@@ -3,11 +3,14 @@ import { computed, ref, watch } from 'vue'
 import debounce from 'lodash.debounce'
 
 import DataPanel from '@/components/ResumePanels/DataPanel.vue'
-import TypstPreviewer from '@/components/ResumePanels/TypstPreviewer.vue'
+import PreviewPanel from '@/components/ResumePanels/PreviewPanel.vue'
 import StylePanel from '@/components/ResumePanels/StylePanel.vue'
 
 import { useProjectsStore } from '@/store/projects-store.ts'
+import { storeToRefs } from 'pinia'
+import { useWindowStateStore } from '@/store/window-state-store.ts'
 
+const { title } = storeToRefs(useWindowStateStore())
 const isLoading = ref(true)
 const projectStore = useProjectsStore()
 const artifact = ref<Uint8Array>(new Uint8Array(0))
@@ -33,16 +36,16 @@ const updateArtifact = debounce(async () => {
   isLoading.value = false
 }, 300)
 
-watch(data, updateArtifact, { immediate: true ,deep: true })
+watch(data, updateArtifact, { immediate: true, deep: true })
 </script>
 
 <template>
   <el-splitter>
     <el-splitter-panel>
-      <DataPanel v-model:data="data" :template-path="templatePath"/>
+      <DataPanel v-model:data="data" :template-path="templatePath" />
     </el-splitter-panel>
     <el-splitter-panel>
-      <TypstPreviewer :artifact="artifact" :is-loading="isLoading" />
+      <PreviewPanel :project-name="title" :artifact="artifact" :is-loading="isLoading" />
     </el-splitter-panel>
     <el-splitter-panel collapsible>
       <StylePanel />
