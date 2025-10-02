@@ -35,7 +35,7 @@ export class DatedBlock implements DataType.DatedBlock {
       if (this._data[0].getTime() === this._data[1].getTime()) {
         return new PlainText(this._data[0].toDateString())
       } else {
-        return new PlainText(this._data[0].toDateString() + '~' + this._data[1].toDateString())
+        return new PlainText(this._data[0].toDateString() + ' --- ' + this._data[1].toDateString())
       }
     } else {
       return this._data
