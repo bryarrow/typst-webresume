@@ -29,37 +29,14 @@ export class Link implements DataType.Link {
 export class DatedBlock implements DataType.DatedBlock {
   readonly type = 'dated-block'
   term: PlainText
-  private _data: PlainText | Date[]
-  get data(): PlainText {
-    if (this._data instanceof Array) {
-      if (this._data[0].getTime() === this._data[1].getTime()) {
-        return new PlainText(this._data[0].toDateString())
-      } else {
-        return new PlainText(this._data[0].toDateString() + ' --- ' + this._data[1].toDateString())
-      }
-    } else {
-      return this._data
-    }
-  }
-  set data(data: PlainText | [Date, Date]) {
-    this._data = data
-  }
+  data: PlainText
 
   constructor(datedBlock?: Partial<DataType.DatedBlock>) {
     if (datedBlock?.type !== undefined && datedBlock?.type !== 'dated-block')
       throw new Error(`You can’t use ${datedBlock.type} to construct the Dated Block.`)
 
     this.term = datedBlock?.term ?? new PlainText('')
-    this._data = datedBlock?.data ?? new PlainText('')
-  }
-
-  // noinspection JSUnusedGlobalSymbols: it will be used in JSON.stringify()
-  toJSON(): DataType.DatedBlock {
-    return {
-      type: this.type,
-      term: this.term,
-      data: this.data,
-    }
+    this.data = datedBlock?.data ?? new PlainText('')
   }
 }
 

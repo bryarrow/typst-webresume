@@ -13,7 +13,6 @@ export interface Link {
 export interface DatedBlock {
   type: 'dated-block'
   term: PlainText
-  // you can add a _data: Date[] and a getter/setter to support Date as template-data
   data: PlainText
 }
 
