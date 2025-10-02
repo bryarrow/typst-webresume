@@ -10,7 +10,7 @@ export const useWindowStateStore = defineStore(
     const title = computed(() => {
       if (currentTab.value === 'home' || currentTab.value === 'settings') {
         return currentTab.value
-      }else{
+      } else {
         const projectStore = useProjectsStore()
         return projectStore.allProjectsData[currentTab.value].name
       }
@@ -18,7 +18,17 @@ export const useWindowStateStore = defineStore(
 
     const isDark = useDark()
     const toggleDark = useToggle(isDark)
-    return { currentTab, title, isDark, toggleDark }
+
+    const currentLocateID = ref('zh-cn')
+    const availableLocates = ['en', 'zh-cn']
+    return {
+      currentTab,
+      title,
+      isDark,
+      toggleDark,
+      currentLocateID,
+      availableLocates,
+    }
   },
   {
     persist: [
