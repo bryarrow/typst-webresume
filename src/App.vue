@@ -51,26 +51,31 @@ const removeTab = async (targetName: TabPaneName) => {
 
 <template>
   <el-config-provider :locale="locate(currentLocateID)">
-  <el-container class="bg-gray-100 dark:bg-[rgba(59,58,72,1)] h-screen">
-    <el-header class="bg-transparent !h-0 md:!h-[5vh]">{{title}}</el-header>
-    <div class="md:hidden bg-white dark:bg-black h-15 w-full"></div>
-    <el-main class="h-full md:h-[95vh] !p-0 !overflow-hidden bg-white dark:bg-black">
-      <el-tabs type="card" v-model="currentTab" @tab-remove="removeTab" @tab-change="changeTab">
-        <el-tab-pane label="Home" name="home"></el-tab-pane>
-        <el-tab-pane
-          v-for="projId of projectsStore.openedProjectsID"
-          :key="projId"
-          :name="projId"
-          :label="projectsStore.allProjectsData[projId].name"
-          closable
-          stretch
-        >
-        </el-tab-pane>
-        <el-tab-pane label="Settings" name="settings"> </el-tab-pane>
-      </el-tabs>
-      <RouterView />
-    </el-main>
-  </el-container>
+    <el-container class="bg-white  dark:bg-black h-screen">
+      <el-header height="fit" class="flex flex-row items-center">
+        <el-page-header class="my-3" @back="router.back()">
+          <template #content>
+            <span class="font-bold">{{ title }}</span>
+          </template>
+        </el-page-header>
+      </el-header>
+      <el-main class="h-full !p-0 !pt-1 !overflow-hidden">
+        <el-tabs type="card" v-model="currentTab" @tab-remove="removeTab" @tab-change="changeTab">
+          <el-tab-pane label="Home" name="home"></el-tab-pane>
+          <el-tab-pane
+            v-for="projId of projectsStore.openedProjectsID"
+            :key="projId"
+            :name="projId"
+            :label="projectsStore.allProjectsData[projId].name"
+            closable
+            stretch
+          >
+          </el-tab-pane>
+          <el-tab-pane label="Settings" name="settings"> </el-tab-pane>
+        </el-tabs>
+        <RouterView />
+      </el-main>
+    </el-container>
   </el-config-provider>
 </template>
 
