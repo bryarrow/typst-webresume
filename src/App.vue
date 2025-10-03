@@ -74,16 +74,4 @@ const removeTab = async (targetName: TabPaneName) => {
   </el-config-provider>
 </template>
 
-<!--suppress CssUnusedSymbol -->
-<style scoped>
-@reference './assets/main.css';
-:deep(.el-tabs__item:not(.is-active)) {
-  @apply dark:!text-gray-300 dark:hover:!text-gray-50;
-}
-:deep(.el-tabs__item.is-active) {
-  @apply dark:!text-teal-600 !border-b-teal-600 border-b-4;
-}
-:deep(.el-tabs__nav-wrap) {
-  @apply !bg-gray-100 dark:!bg-[rgba(59,58,72,1)];
-}
-</style>
+<style scoped></style>
