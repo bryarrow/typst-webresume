@@ -5,11 +5,11 @@ import { Delete } from '@element-plus/icons-vue'
 import { ref } from 'vue'
 
 const projectsStore = useProjectsStore()
-const { projectName, projectID } = defineProps<{ projectName: string,projectID: string }>()
+const { projectName, projectID } = defineProps<{ projectName: string; projectID: string }>()
 
 const remove = () => {
   const result = projectsStore.removeProject(projectID)
-  if (!result){
+  if (!result) {
     dialogErrorVisible.value = true
     return false
   }
@@ -22,8 +22,17 @@ const dialogConfirmVisible = ref<boolean>(false)
 <template>
   <el-card shadow="hover" body-class="!px-3">
     <el-row justify="space-between">
-      <el-col :span="10" @click="router.push({name: 'resume', params: {id: projectID}})">{{projectName}}</el-col>
-      <el-col :span="1"><el-button :icon="Delete" class="w-full" @click="dialogConfirmVisible = true"></el-button></el-col>
+      <el-col :span="10" @click="router.push({ name: 'resume', params: { id: projectID } })">
+        {{ projectName }}
+      </el-col>
+      <el-col :span="1">
+        <el-button
+          :icon="Delete"
+          class="w-full"
+          @click="dialogConfirmVisible = true"
+          type="danger"
+        />
+      </el-col>
     </el-row>
   </el-card>
   <el-dialog v-model="dialogConfirmVisible">
@@ -35,7 +44,10 @@ const dialogConfirmVisible = ref<boolean>(false)
     <template #footer>
       <div class="dialog-footer">
         <el-button @click="dialogConfirmVisible = false">Cancel</el-button>
-        <el-button type="danger" @click="remove();dialogConfirmVisible = false">
+        <el-button
+          type="danger"
+          @click="remove();dialogConfirmVisible = false"
+        >
           Confirm
         </el-button>
       </div>
