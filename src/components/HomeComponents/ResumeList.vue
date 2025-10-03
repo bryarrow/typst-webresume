@@ -35,19 +35,33 @@ const templates = Object.keys(getAllTemplatesInfo().templates)
         <ResumeItem :project-name="project.name" :projectID="project.id" />
       </template>
     </el-space>
-    <el-dialog v-model="addDialogVisible">
-      <el-form>
-        <el-form-item label="Name">
-          <el-input v-model="addName" />
-        </el-form-item>
-        <el-form-item label="Template">
-          <el-select v-model="addTemplate" placeholder="Select Template">
-            <el-option v-for="item in templates" :key="item" :label="item" :value="item" />
-          </el-select>
-        </el-form-item>
-      </el-form>
+    <el-dialog
+      v-model="addDialogVisible"
+      class="rounded-2xl w-[90%] max-w-md"
+    >
+      <div class="p-4">
+        <h2 class="text-xl font-semibold mb-4">Create New Project</h2>
+
+        <el-form label-position="top" class="space-y-4">
+          <el-form-item label="Name" class="mb-0">
+            <el-input v-model="addName" placeholder="Enter project name" />
+          </el-form-item>
+
+          <el-form-item label="Template" class="mb-0">
+            <el-select v-model="addTemplate" placeholder="Select Template" class="w-full">
+              <el-option
+                v-for="item in templates"
+                :key="item"
+                :label="item"
+                :value="item"
+              />
+            </el-select>
+          </el-form-item>
+        </el-form>
+      </div>
+
       <template #footer>
-        <div class="dialog-footer">
+        <div class="dialog-footer flex justify-end gap-2 px-4 pb-3">
           <el-button @click="addDialogVisible = false">Cancel</el-button>
           <el-button
             type="primary"
