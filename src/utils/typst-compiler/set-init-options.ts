@@ -1,14 +1,16 @@
 import pako from 'pako'
 import { loadFonts } from '@myriaddreamin/typst.ts'
 import { typst } from '@/utils/typst-compiler/typst.ts'
+import { sourceHanSansSC, sourceHanSerifSC, kpSans, kpSerif } from '@/utils/typst-compiler/fonts.ts'
 
 let isSet = false
 
 export default function setTypst() {
   if (!isSet) {
+    const fonts = sourceHanSansSC.concat(sourceHanSerifSC).concat(kpSans).concat(kpSerif)
     typst.setCompilerInitOptions({
       beforeBuild: [
-        loadFonts([], {
+        loadFonts(fonts, {
           assets: ['text', 'cjk'],
           assetUrlPrefix: {
             text: 'https://cdn.jsdmirror.com/gh/typst/typst-assets@v0.13.1/files/fonts/',

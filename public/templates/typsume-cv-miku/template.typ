@@ -1,8 +1,8 @@
 // You may need to change this settings
 #let sans-en = "KpSans"
-#let sans-zh = "Source Han Sans"
+#let sans-zh = "Source Han Sans SC"
 #let serif-en = "KpRoman"
-#let serif-zh = "Source Han Serif"
+#let serif-zh = "Source Han Serif SC"
 #let emj = "Segoe UI Emoji"
 
 #let title-and-info-align = left
