@@ -35,10 +35,7 @@ const templates = Object.keys(getAllTemplatesInfo().templates)
         <ResumeItem :project-name="project.name" :projectID="project.id" />
       </template>
     </el-space>
-    <el-dialog
-      v-model="addDialogVisible"
-      class="rounded-2xl w-[90%] max-w-md"
-    >
+    <el-dialog v-model="addDialogVisible" class="rounded-2xl">
       <div class="p-4">
         <h2 class="text-xl font-semibold mb-4">Create New Project</h2>
 
@@ -49,12 +46,7 @@ const templates = Object.keys(getAllTemplatesInfo().templates)
 
           <el-form-item label="Template" class="mb-0">
             <el-select v-model="addTemplate" placeholder="Select Template" class="w-full">
-              <el-option
-                v-for="item in templates"
-                :key="item"
-                :label="item"
-                :value="item"
-              />
+              <el-option v-for="item in templates" :key="item" :label="item" :value="item" />
             </el-select>
           </el-form-item>
         </el-form>
